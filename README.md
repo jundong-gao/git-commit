@@ -13,5 +13,5 @@ commit
 
 ### 示例
 
-![示例.png](example.png)
+![示例.png](/example.png)
 
