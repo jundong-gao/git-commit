@@ -1,12 +1,16 @@
 {
   "name": "gao-git-commit",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": false,
   "license": "MIT",
   "keywords": [
     "git-commit",
     "规范化 git commit"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:jundong-gao/git-commit.git"
+  },
   "description": "git commit 规范化",
   "main": "index.js",
   "scripts": {},
