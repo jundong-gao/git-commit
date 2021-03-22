@@ -24,7 +24,7 @@ let questions = [
 
 inquirer.prompt(questions).then(answers => {
     let msg = `${answers.commitType}`
-    answers.editFile ? msg += `(${answers.editFile}): ` : ': '
+    answers.editFile ? msg += `(${answers.editFile}): ` : msg += ': '
     let commitMessageArr = answers.commitMessage.split('|')
     
     if(commitMessageArr.length == 1) msg += `${answers.commitMessage}`
