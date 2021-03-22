@@ -1,0 +1,26 @@
+{
+  "name": "gao-git-commit",
+  "version": "1.0.0",
+  "private": false,
+  "license": "MIT",
+  "keywords": [
+    "git-commit",
+    "规范化 git commit"
+  ],
+  "description": "git commit 规范化",
+  "main": "index.js",
+  "scripts": {},
+  "bin": {
+    "commit": "index.js"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "dependencies": {
+    "inquirer": "^8.0.0",
+    "ora": "^5.4.0",
+    "shelljs": "^0.8.4"
+  }
+}
