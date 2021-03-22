@@ -12,6 +12,6 @@ commit
 
 
 ### 示例
-
-![示例.png](/example.png)
+https://github.com/你的用户名/你的repository仓库名/raw/分支名master/刚你新建的图片文件夹名称/***.png或者***.jpg
+![示例.png](https://bimg.gaojundong.com/commit-example.png)
 
