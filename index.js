@@ -48,7 +48,7 @@ function confirm(msg) {
     inquirer.prompt([
         {type: 'confirm', 'name': 'gitCommit', message: '提交信息如上⏫ ， 是否提交?'}
     ]).then(ans => {
-        ans.gitCommit ? shell.exec(`git commit -m '${msg}'`) :  ora.fail('==已取消提交==')    
+        ans.gitCommit ? shell.exec(`git commit -m "${msg}"`) :  ora.fail('==已取消提交==')    
     }).catch(e => {
         console.log(e)
     })
