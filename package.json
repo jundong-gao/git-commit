@@ -1,6 +1,6 @@
 {
   "name": "gao-git-commit",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "private": false,
   "license": "MIT",
   "keywords": [
@@ -23,8 +23,10 @@
     "not dead"
   ],
   "dependencies": {
+    "argv": "0.0.2",
     "inquirer": "^8.0.0",
     "ora": "^5.4.0",
-    "shelljs": "^0.8.4"
+    "shelljs": "^0.8.4",
+    "yargs": "^16.2.0"
   }
 }

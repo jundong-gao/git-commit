@@ -9,6 +9,16 @@ const types = require('./config')
 const inquirer = require('inquirer');
 const shell = require('shelljs')
 const ora = require('ora')()
+const argv = require('yargs').argv
+const package = require('./package')
+
+if(argv.V || argv.v) return ora.succeed(`${package.version}`)
+if(argv.h) return console.log(`
+  常规操作：
+    1) git add .
+    2) commit 
+    3) git push
+`)
 
 
 
@@ -26,7 +36,7 @@ inquirer.prompt(questions).then(answers => {
     let msg = `${answers.commitType}`
     answers.editFile ? msg += `(${answers.editFile}): ` : msg += ': '
     let commitMessageArr = answers.commitMessage.split('|')
-    
+
     if(commitMessageArr.length == 1) msg += `${answers.commitMessage}`
 
     if(commitMessageArr.length > 1) {
@@ -48,7 +58,7 @@ function confirm(msg) {
     inquirer.prompt([
         {type: 'confirm', 'name': 'gitCommit', message: '提交信息如上⏫ ， 是否提交?'}
     ]).then(ans => {
-        ans.gitCommit ? shell.exec(`git commit -m "${msg}"`) :  ora.fail('==已取消提交==')    
+        ans.gitCommit ? shell.exec(`git commit -m "${msg}"`) :  ora.fail('==已取消提交==')
     }).catch(e => {
         console.log(e)
     })
