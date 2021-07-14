@@ -11,6 +11,20 @@ const shell = require('shelljs')
 const ora = require('ora')()
 const argv = require('yargs').argv
 const package = require('./package')
+const figlet = require('figlet')
+const { spawn } = require('child_process')
+
+
+// ins()
+
+// async function ins () {
+//     console.log('安装依赖');
+//     ora.start()
+//     let a = await shell.exec('npm install')
+//     ora.succeed('安装成功👌')
+// }
+
+
 
 if(argv.V || argv.v) return ora.succeed(`${package.version}`)
 if(argv.h) return console.log(`
@@ -19,6 +33,15 @@ if(argv.h) return console.log(`
     2) commit 
     3) git push
 `)
+
+
+console.log(figlet.textSync('GIT COMMIT!', {
+    // font: 'Ghost',
+    horizontalLayout: 'default',
+    verticalLayout: 'default',
+    width: 80,
+    whitespaceBreak: true
+}))
 
 
 

@@ -1,6 +1,6 @@
 {
   "name": "gao-git-commit",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "private": false,
   "license": "MIT",
   "keywords": [
@@ -24,9 +24,12 @@
   ],
   "dependencies": {
     "argv": "0.0.2",
+    "child_process": "^1.0.2",
+    "figlet": "^1.5.0",
     "inquirer": "^8.0.0",
     "ora": "^5.4.0",
     "shelljs": "^0.8.4",
+    "spawn-please": "^1.0.0",
     "yargs": "^16.2.0"
   }
 }
