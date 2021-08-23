@@ -63,8 +63,9 @@ inquirer.prompt(questions).then(answers => {
     if(commitMessageArr.length == 1) msg += `${answers.commitMessage}`
 
     if(commitMessageArr.length > 1) {
-        commitMessageArr.forEach(item => {
-            msg += `\n\t${item}`
+        let index_arr = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k']
+        commitMessageArr.forEach((item, index) => {
+            msg += `\n\t${index_arr[index]}) ${item}`
         })
     }
     confirm(msg)
